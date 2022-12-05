@@ -1,0 +1,5 @@
+:root {
+  --font-size: 32px;
+  --base-space: 8px;
+  /* custom 프로퍼티 장점 : media 쿼리시 root만 수정해도 됨 */
+}
