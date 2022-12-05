@@ -106,6 +106,17 @@ p {
   color: var(--color-main);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  font-size: 28px;
+  color: var(--color-wh);
+  background: 0;
+  border: 0;
+  display: none;
+}
+
 /* home */
 #home {
   width: 100%;
@@ -123,6 +134,7 @@ p {
 .about__majors {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .major {
   width: 50%;
@@ -161,6 +173,7 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 .major__description {
+  margin-bottom: 20px;
   color: var(--color-dg);
 }
 .jobs {
@@ -302,4 +315,29 @@ p {
 
 .contact__link i:hover {
   transform: scale(1.2);
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+  .navbar__menu__items.active {
+    border-bottom: 0;
+  }
+  .project {
+    flex-grow: 1;
+    /* 화면 비율에 맞춰서 채우기 */
+  }
 }
