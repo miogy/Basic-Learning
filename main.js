@@ -68,18 +68,28 @@ workBtnContainer.addEventListener("click", (e) => {
   if (filter == null) {
     return;
   }
+
+  //animation 1실행
+  projectContainer.classList.add("anim-out");
   // let project;
   // for (let i = 0; i < projects.length; i++) {
   //   project = projects[i];
   // }
-  projects.forEach((project) => {
-    // for문과 같은 의미, 배열을 불러와서 정렬
-    if (filter === "*" || filter === project.dataset.type) {
-      project.classList.remove("invisible");
-    } else {
-      project.classList.add("invisible");
-    }
-  });
+
+  //animation 2실행 => setTimeout 3초 => filter정렬
+  //forEach문이 1실행 다음으로 오면 filter되고 바로 애니메이션이 적용되어 복잡
+  //setTimeout 3초후 실행할수있게 콜백
+  setTimeout(() => {
+    projects.forEach((project) => {
+      // for문과 같은 의미, 배열을 불러와서 정렬
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 300);
 });
 
 // 중복코드시 함수로 만들어서 사용

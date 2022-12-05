@@ -249,6 +249,13 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  opacity: 1;
+  transition: all 300ms ease-in;
+}
+
+.work__projects.anim-out {
+  opacity: 0.6;
+  transform: scale(0.96) translateY(40px);
 }
 .project {
   position: relative;
