@@ -26,6 +26,19 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-bk);
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -49,4 +62,32 @@ p {
   font-size: var(--font-small);
   color: var(--color-dg);
   margin: 16px 0;
+}
+
+/* navbar */
+#navbar {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__logo > a {
+  font-size: var(--font-large);
+  font-weight: var(--weight-light);
+}
+.navbar__menu {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar__menu__items {
+  cursor: pointer;
+  font-weight: var(--weight-semi-bold);
+  padding: 8px 12px;
+  margin: 0 4px;
+}
+.navbar__menu__items.active {
+  border-bottom: 3px solid #000;
+}
+.navbar__menu__items:hover {
+  color: darkcyan;
 }
