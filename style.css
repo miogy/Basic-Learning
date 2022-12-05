@@ -138,6 +138,9 @@ p {
 }
 
 /* About */
+#about {
+  padding-top: 80px;
+}
 
 .about__majors {
   display: flex;
@@ -190,6 +193,10 @@ p {
 }
 
 /* work */
+#work {
+  padding-top: 80px;
+}
+
 .work__top {
   padding-top: 8px;
   background-color: var(--color-lg);
