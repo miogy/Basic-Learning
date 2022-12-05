@@ -1,6 +1,11 @@
 /* Global */
 :root {
   /* color */
+  --color-bk: #000;
+  --color-dg: #333;
+  --color-g: #666;
+  --color-lg: #e8e8e8;
+
   /* font size */
   --font-large: 48px;
   --font-medium: 28px;
@@ -19,4 +24,29 @@
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-bk);
+  margin: 16px 0;
+}
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-bk);
+  margin: 16px 0;
+}
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-bk);
+  margin: 16px 0;
+}
+p {
+  font-size: var(--font-small);
+  color: var(--color-dg);
+  margin: 16px 0;
 }
