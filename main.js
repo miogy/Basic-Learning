@@ -31,6 +31,22 @@ navbarMenu.addEventListener("click", (e) => {
   if (link == null) {
     return;
   }
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView();
+  scrollIntoView(link);
 });
+
+//Handle click on "contact me" button on home
+const asideTopBtn = document.querySelector(".aside__top");
+asideTopBtn.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
+
+const asideBottomBtn = document.querySelector(".aside__bottom");
+asideBottomBtn.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+// 중복코드시 함수로 만들어서 사용
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
