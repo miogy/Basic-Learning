@@ -264,6 +264,10 @@ p {
   transition: all 300ms ease;
 }
 
+.project.invisible {
+  display: none;
+}
+
 .project:hover .project__description {
   top: 0;
   /* opacity: 1; */
