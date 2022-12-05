@@ -6,6 +6,7 @@
   --color-g: #666;
   --color-lg: #e8e8e8;
   --color-wh: #fff;
+  --color-main: darkcyan;
 
   /* font size */
   --font-large: 48px;
@@ -20,6 +21,13 @@
   --weight-regular: 400;
   --weight-light: 300;
   /* custom 프로퍼티 장점 : media 쿼리시 root만 수정해도 됨 */
+}
+
+.section {
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  max-width: 1100px;
 }
 
 /* Universal tags */
@@ -93,7 +101,7 @@ p {
   border-bottom: 3px solid #fff;
 }
 .navbar__menu__items:hover {
-  color: darkcyan;
+  color: var(--color-main);
 }
 
 /* home */
@@ -106,4 +114,54 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* About */
+
+.about__majors {
+  display: flex;
+  justify-content: center;
+}
+.major {
+  width: 50%;
+  margin: 0 40px;
+}
+.major__icon {
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  font-size: 70px;
+  line-height: 170px;
+  border: 2px solid var(--color-lg);
+  border-radius: 50%;
+  color: var(--color-g);
+}
+.major__icon img {
+  width: 70px;
+  opacity: 0.7;
+  transition: all 300ms ease;
+}
+.major__icon i:hover img {
+  opacity: 1;
+  transform: rotate(-30deg) scale(1.3);
+}
+.major__icon i {
+  transition: all 300ms ease;
+}
+.major__icon:hover i {
+  color: var(--color-bk);
+  transform: rotate(-30deg) scale(1.3);
+}
+.major__title {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+}
+.major__description {
+  color: var(--color-dg);
+}
+.jobs {
+  display: flex;
+  justify-content: flex-start;
 }
