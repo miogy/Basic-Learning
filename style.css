@@ -1,5 +1,22 @@
+/* Global */
 :root {
-  --font-size: 32px;
+  /* color */
+  /* font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
   --base-space: 8px;
+  /* font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+  --weight-light: 300;
   /* custom 프로퍼티 장점 : media 쿼리시 root만 수정해도 됨 */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
 }
