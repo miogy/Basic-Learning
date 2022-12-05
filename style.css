@@ -195,20 +195,26 @@ p {
 .category__btn.active .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: -8px;
 }
 .category__count {
   background-color: darkturquoise;
   border-radius: 50%;
   color: var(--color-wh);
-  width: 24px;
-  height: 24px;
+  padding: 4px 8px;
   display: inline-block;
   position: relative;
   top: -20px;
   left: -8px;
+  font-size: var(--font-micro);
   opacity: 0;
   transition: all 300ms ease;
+}
+
+.category__count strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .work__projects {
   padding-top: 20px;
@@ -264,4 +270,36 @@ p {
   margin-top: 8px;
   margin-left: -12px;
   background-color: #333;
+}
+
+/* contact */
+#contact {
+  width: 100%;
+  height: 100%;
+}
+.contact__wrap {
+  height: 100%;
+}
+#contact,
+#contact h1,
+#contact h3,
+#contact p,
+#contact i {
+  color: var(--color-wh);
+  background-color: var(--color-bk);
+}
+
+.contact__link i {
+  font-size: 40px;
+  margin: 0 16px 20px 16px;
+}
+
+.contact__email {
+  margin-bottom: 10px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+}
+
+.contact__link i:hover {
+  transform: scale(1.2);
 }
