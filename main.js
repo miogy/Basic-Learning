@@ -69,6 +69,16 @@ workBtnContainer.addEventListener("click", (e) => {
     return;
   }
 
+  // active btn
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  //e.target.classList.add("selected"); //span을 누르면 target이 잡히지 않음
+
+  //해결방안 target을 삼항연산자로 지정해준다.
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
+
   //animation 1실행
   projectContainer.classList.add("anim-out");
   // let project;

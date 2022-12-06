@@ -106,12 +106,13 @@ p {
   font-weight: var(--weight-semi-bold);
   padding: 8px 12px;
   margin: 0 4px;
+  border-bottom: 3px solid transparent;
+  /* transparent : color없앰 */
 }
-.navbar__menu__items.active {
-  border-bottom: 3px solid #fff;
-}
+
 .navbar__menu__items:hover {
   color: var(--color-main);
+  border-bottom: 3px solid #fff;
 }
 
 .navbar__toggle-btn {
@@ -216,11 +217,11 @@ p {
   border: 0;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   color: var(--color-main);
 }
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: -8px;
