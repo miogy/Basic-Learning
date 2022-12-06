@@ -213,7 +213,7 @@ p {
   border-right: 1px solid var(--color-gray);
   background-color: var(--color-lg);
 }
-.category__btn:nth-child(3) {
+.category__btn:nth-child(4) {
   border: 0;
 }
 
@@ -261,7 +261,7 @@ p {
 .project {
   position: relative;
   width: 280px;
-  height: 250px;
+  height: 280px;
   margin: 4px;
   display: flex;
   justify-content: center;
@@ -278,26 +278,44 @@ p {
 
 .project:hover .project__description {
   top: 0;
+  background-color: var(--color-wh);
   /* opacity: 1; */
 }
 
 .project__img {
-  max-width: 100%;
+  /* max-width: 100%; */
   max-height: 100%;
 }
 
 .project__description {
   position: absolute;
-  top: 250px;
+  top: 200px;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--color-wh);
+  background-color: rgba(255, 255, 255, 0.9);
   transition: all 500ms ease;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.25);
   /* opacity: 0; */
+}
+
+.project__description h3 {
+  font-size: 22px;
+}
+.project__description-title {
+  font-weight: var(--weight-bold);
+  margin-bottom: 16px;
+}
+
+.project__description .design {
+  padding-top: 60px;
+}
+.project__description-text {
+  margin-bottom: 14px;
+  font-weight: var(--weight-light);
 }
 
 .project__description h3::after {
@@ -307,7 +325,7 @@ p {
   left: 50%;
   width: 25px;
   height: 2px;
-  margin-top: 8px;
+  margin-top: 12px;
   margin-left: -12px;
   background-color: #333;
 }
@@ -363,19 +381,25 @@ aside {
 
 /* 반응형 */
 @media screen and (max-width: 768px) {
-  .navbar__toggle-btn {
-    display: block;
+  #navbar {
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar.navbar--dark {
+    padding: 6px;
   }
 
   .navbar__logo > a {
+    padding: 16px 16px 0 16px;
     color: var(--color-wh);
     font-size: 46px;
     font-weight: var(--weight-light);
   }
 
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
+  .navbar__toggle-btn {
+    display: block;
   }
 
   .navbar__menu {
@@ -384,9 +408,13 @@ aside {
     text-align: center;
     display: none;
   }
+  .navbar__menu.open {
+    display: block;
+  }
 
-  .navbar__menu__items.active {
-    border-bottom: 0;
+  .navbar__menu__items.active,
+  .navbar__menu__items:hover {
+    border-bottom: 3px solid transparent;
   }
 
   #home {

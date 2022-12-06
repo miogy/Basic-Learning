@@ -24,9 +24,9 @@ document.addEventListener("scroll", () => {
 const navbarMenu = document.querySelector(".navbar__menu");
 
 navbarMenu.addEventListener("click", (e) => {
-  console.log(e.target.dataset.link); //html : <tag data-link=#menu>
-  const target = e.target;
-  const link = target.dataset.link;
+  //console.log(e.target.dataset.link); //html : <tag data-link=#menu>
+  // const target = e.target;
+  const link = e.target.dataset.link;
 
   if (link == null) {
     return;
@@ -34,7 +34,14 @@ navbarMenu.addEventListener("click", (e) => {
   scrollIntoView(link);
 });
 
-//Handle click on "contact me" button on home
+//navbar toggle
+const navbarToggle = document.querySelector(".navbar__toggle-btn");
+navbarToggle.addEventListener("click", () => {
+  // console.log(navbarMenu);
+  navbarMenu.classList.toggle("open");
+});
+
+// aside scroll view
 const asideTopBtn = document.querySelector(".aside__top");
 asideTopBtn.addEventListener("click", () => {
   scrollIntoView("#home");
@@ -46,7 +53,6 @@ asideBottomBtn.addEventListener("click", () => {
 });
 
 // scroll down => home fade
-
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
@@ -56,19 +62,17 @@ document.addEventListener("scroll", () => {
 });
 
 //category => filtering
-
-const workBtnContainer = document.querySelector(".work__categories");
+const categoryBtn = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 //각각의 컨테이너 안에 프로젝트들을 받아옴
 const projects = document.querySelectorAll(".project");
 //btn click
-workBtnContainer.addEventListener("click", (e) => {
+categoryBtn.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter; //parentNode를 사용하여 target지정(span)
   //console.log(filter); //e.target값 지정
   if (filter == null) {
     return;
   }
-
   // active btn
   const active = document.querySelector(".category__btn.selected");
   active.classList.remove("selected");
