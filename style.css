@@ -185,12 +185,21 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 .major__description {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: var(--color-dg);
 }
 .jobs {
+  padding-top: 40px;
+  padding-left: 46px;
+  margin-left: 50px;
   display: flex;
   justify-content: flex-start;
+}
+.about__jobs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-top: 1px solid lightgray;
 }
 
 /* work */
